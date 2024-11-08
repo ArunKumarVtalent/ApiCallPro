@@ -1,0 +1,44 @@
+
+<div>
+    <h2>Employee Details </h2>
+    <div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <!-- <th>Opearations</th> -->
+            <th>EmpId</th>
+            <th>Name</th>
+            <th>Password</th>
+            <th>Gender</th>            
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Address</th>
+            <th>DeptNo</th> 
+            <th>Opearations</th>          
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of EmpList">
+            <!-- <td>
+              <input type="button" value="Edit" class="btn btn-success"/> |
+              <input type="button" value="Delete" class="btn btn-danger"/> 
+            </td> -->
+            <td>{{emp.empId}}</td>
+            <td>{{emp.ename | uppercase }}</td>
+            <td>{{emp.password}}</td>
+            <td>{{emp.gender}}</td>            
+            <td>{{emp.phone}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.salary | currency:'INR'}}</td>
+            <td>{{emp.address}}</td>
+            <td>{{emp.deptNo}}</td>
+            <td>
+              <img src="assets/Images/Register.png" style="cursor: pointer;" (click)="btn_Edit(emp.empId)" /> |
+              <img src="assets/Images/Cancel.png" style="cursor: pointer;" (click)="btn_Delete(emp.empId)" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

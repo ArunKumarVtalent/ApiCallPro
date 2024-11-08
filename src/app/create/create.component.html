@@ -1,0 +1,88 @@
+<div class="row" style="padding:10px;">
+    <div class="col-sm-12">
+        <div style="background-color: white;">                   
+            <!-- <div class="row" style="margin-bottom: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Employee Id<img src="assets/Images/id.png"/></span></div>
+                <div class="col-sm-3">
+                    <input type="text" id="txtEmpId" class="form-control" placeholder="Please enter employee id...!"/>
+                </div>
+                <div class="col-sm-3"></div>            
+            </div> -->
+            <div class="row" style="margin-bottom: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Name</span></div>
+                <div class="col-sm-3">
+                    <input type="text" [(ngModel)]="Emp.ename" id="txtEname" class="form-control" placeholder="Please enter name...!"/>
+                </div>
+                <div class="col-sm-3"></div>            
+            </div>
+            <div class="row" style="margin-bottom: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Password</span><img src="assets/Images/Password.png" /></div>
+                <div class="col-sm-3">
+                    <input type="password" [(ngModel)]="Emp.password" id="txtPassword" class="form-control" placeholder="Please enter password...!"/>
+                </div>
+                <div class="col-sm-3"></div>            
+            </div>
+            <div class="row" style="margin-bottom: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Gender</span></div>
+                <div class="col-sm-3">
+                    <input type="radio" [(ngModel)]="Emp.gender" id="rbtnMale" name="Gender" value="Male"/> Male
+                    <input type="radio" [(ngModel)]="Emp.gender" id="rbtnFemale" name="Gender" value="Female"/> Female
+                </div>
+                <div class="col-sm-3"></div>            
+            </div>
+            <div class="row" style="margin-bottom: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Phone</span></div>
+                <div class="col-sm-3">
+                    <input type="text" [(ngModel)]="Emp.phone" id="txtPhone" class="form-control" placeholder="Please enter phone no...!"/>
+                </div>
+                <div class="col-sm-3"></div>            
+            </div>
+            <div class="row" style="margin-bottom: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Email</span></div>
+                <div class="col-sm-3">
+                    <input type="text" [(ngModel)]="Emp.email" id="txtEmail" class="form-control" placeholder="Please enter email address...!"/>
+                </div>
+                <div class="col-sm-3"></div>            
+            </div>
+            <div class="row" style="margin-bottom: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Salary</span></div>
+                <div class="col-sm-3">
+                    <input type="text" [(ngModel)]="Emp.salary" id="txtSalary" class="form-control" placeholder="Please enter salary...!"/>
+                </div>
+                <div class="col-sm-3"></div>            
+            </div>
+            <div class="row" style="margin-bottom: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Address</span></div>
+                <div class="col-sm-3">
+                    <textarea id="txtAddress" [(ngModel)]="Emp.address" rows="5" class="form-control" placeholder="Please enter Address...!"></textarea>
+                </div>
+                <div class="col-sm-3"></div>            
+            </div>
+            <div class="row" style="margin-bottom: 10px;">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-2"><span style="font-weight: bold;">Department</span></div>
+                <div class="col-sm-3">
+                    <select class="form-control" [(ngModel)]="Emp.deptNo">
+                       <option value="0">-Select Department-</option>
+                       <option *ngFor="let dept of DeptList" value="{{dept.deptNo}}">{{dept.dname}}</option>
+                    </select>                
+                </div>
+                <div class="col-sm-3"></div>            
+            </div>
+            <div class="row" style="margin-bottom: 10px;text-align: center;">
+                <div class="col-sm-12">
+                    <button (click)="btn_Create()" class="btn btn-primary">Register <img src="assets/Images/Register.png" /></button> | 
+                    <button (click)="btn_Cancel()" class="btn btn-danger">Cancel <img src="assets/Images/Cancel.png" /></button> 
+                </div>                       
+            </div>
+        </div>
+    </div>
+ </div>
